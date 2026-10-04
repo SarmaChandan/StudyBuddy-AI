@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyBuddy AI</title>
+
+    <!-- Connect our CSS file -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span class="logo-icon">🎓</span>
+
+            <div>
+
+                <h1>StudyBuddy AI</h1>
+
+                <p>Your AI-powered learning peer</p>
+
+            </div>
+
+        </div>
+
+
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <main class="app-container">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <nav class="sidebar-menu">
+
+
+                <!-- AI CHAT -->
+
+                <button
+                    class="menu-item active"
+                    id="chatMenuBtn"
+                >
+
+                    🤖
+
+                    <span>
+                        AI Chat
+                    </span>
+
+                </button>
+
+
+
+                <!-- QUIZ -->
+
+                <button
+                    class="menu-item"
+                    id="quizMenuBtn"
+                >
+
+                    📝
+
+                    <span>
+                        Quiz
+                    </span>
+
+                </button>
+
+
+
+                <!-- SUMMARIZER -->
+
+                <button
+                    class="menu-item"
+                    id="summarizerMenuBtn"
+                >
+
+                    📖
+
+                    <span>
+                        Summarizer
+                    </span>
+
+                </button>
+
+
+
+                <!-- STUDY PLANNER -->
+
+                <button
+                    class="menu-item"
+                    id="plannerMenuBtn"
+                >
+
+                    📅
+
+                    <span>
+                        Study Planner
+                    </span>
+
+                </button>
+
+
+            </nav>
+
+
+
+            <!-- Quick information -->
+
+            <div class="sidebar-footer">
+
+                <p>
+                    StudyBuddy AI
+                </p>
+
+                <small>
+                    Learn • Practice • Improve
+                </small>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- ================= CHAT SECTION ================= -->
+
+        <section
+            class="chat-section"
+            id="chatSection"
+        >
+
+
+            <!-- Chat header -->
+
+            <div class="chat-header">
+
+                <div>
+
+                    <h2>
+                        AI Study Assistant
+                    </h2>
+
+                    <p>
+                        Ask me anything about your studies.
+                    </p>
+
+                </div>
+
+
+                <span class="online-status">
+
+                    ● Online
+
+                </span>
+
+            </div>
+
+
+
+            <!-- ================= SETTINGS ================= -->
+
+            <div class="study-settings">
+
+
+                <!-- Subject -->
+
+                <div class="setting-group">
+
+                    <label for="subject">
+                        Subject
+                    </label>
+
+
+                    <select id="subject">
+
+                        <option value="general">
+                            General
+                        </option>
+
+                        <option value="javascript">
+                            JavaScript
+                        </option>
+
+                        <option value="python">
+                            Python
+                        </option>
+
+                        <option value="java">
+                            Java
+                        </option>
+
+                        <option value="dbms">
+                            DBMS
+                        </option>
+
+                        <option value="os">
+                            Operating Systems
+                        </option>
+
+                        <option value="machine-learning">
+                            Machine Learning
+                        </option>
+
+                        <option value="web-development">
+                            Web Development
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- Learning mode -->
+
+                <div class="setting-group">
+
+                    <label for="mode">
+                        Learning Mode
+                    </label>
+
+
+                    <select id="mode">
+
+                        <option value="classmate">
+                            🧑‍🤝‍🧑 Explain like a Classmate
+                        </option>
+
+                        <option value="teacher">
+                            👨‍🏫 Explain like a Teacher
+                        </option>
+
+                        <option value="exam">
+                            📝 Exam Answer
+                        </option>
+
+                        <option value="coding">
+                            💻 Coding Mentor
+                        </option>
+
+                        <option value="beginner">
+                            🌱 Beginner Friendly
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ================= CHAT MESSAGES ================= -->
+
+            <div
+                id="chatMessages"
+                class="chat-messages"
+            >
+
+
+                <!-- AI welcome message -->
+
+                <div class="message ai-message">
+
+                    <div class="avatar">
+                        🤖
+                    </div>
+
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            StudyBuddy
+                        </div>
+
+
+                        <p>
+
+                            👋 Hi! I'm your StudyBuddy.
+
+                            Ask me anything about your studies,
+                            and I'll help you understand it.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Example user message -->
+
+                <div class="message user-message">
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            You
+                        </div>
+
+
+                        <p>
+                            What can you help me with?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Example AI response -->
+
+                <div class="message ai-message">
+
+                    <div class="avatar">
+                        🤖
+                    </div>
+
+
+                    <div class="message-content">
+
+                        <div class="message-name">
+                            StudyBuddy
+                        </div>
+
+
+                        <p>
+
+                            I can explain concepts,
+                            generate quizzes,
+                            summarize notes,
+                            help with coding,
+                            and prepare exam-oriented answers.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= INPUT AREA ================= -->
+
+            <div class="chat-input-area">
+
+                <textarea
+                    id="userInput"
+                    placeholder="Ask StudyBuddy anything..."
+                    rows="1"
+                ></textarea>
+
+
+                <button
+                    id="sendBtn"
+                    class="send-btn"
+                    type="button"
+                >
+
+                    ➤
+
+                </button>
+
+            </div>
+
+
+
+            <!-- Small disclaimer -->
+
+            <p class="chat-disclaimer">
+
+                StudyBuddy AI can make mistakes.
+                Always verify important information.
+
+            </p>
+
+
+        </section>
+
+<!-- ================= QUIZ ================= -->
+
+<section
+    class="quiz-section"
+    id="quizSection"
+    style="display: none;"
+>
+
+    <div class="chat-header">
+
+        <div>
+            <h2>📝 AI Quiz</h2>
+
+            <p>
+                Test your knowledge with StudyBuddy AI.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="quiz-content">
+
+        <!-- Quiz Settings -->
+
+        <div class="quiz-settings">
+
+            <div class="setting-group">
+
+                <label for="quizSubject">
+                    Subject
+                </label>
+
+                <select id="quizSubject">
+
+                    <option value="general">
+                        General
+                    </option>
+
+                    <option value="javascript">
+                        JavaScript
+                    </option>
+
+                    <option value="python">
+                        Python
+                    </option>
+
+                    <option value="java">
+                        Java
+                    </option>
+
+                    <option value="dbms">
+                        DBMS
+                    </option>
+
+                    <option value="os">
+                        Operating Systems
+                    </option>
+
+                    <option value="machine-learning">
+                        Machine Learning
+                    </option>
+
+                    <option value="web-development">
+                        Web Development
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="setting-group">
+
+                <label for="quizDifficulty">
+                    Difficulty
+                </label>
+
+                <select id="quizDifficulty">
+
+                    <option value="easy">
+                        Easy
+                    </option>
+
+                    <option value="medium" selected>
+                        Medium
+                    </option>
+
+                    <option value="hard">
+                        Hard
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- Start Quiz Button -->
+
+        <button
+            id="startQuizBtn"
+            class="start-quiz-btn"
+            type="button"
+        >
+            🚀 Start Quiz
+        </button>
+
+
+        <!-- Quiz Questions Will Appear Here -->
+
+        <div
+            id="quizContainer"
+            class="quiz-container"
+        >
+
+        </div>
+
+
+    </div>
+
+</section>
+
+        <!-- ================= NOTES SUMMARIZER ================= -->
+
+        <section
+            class="summarizer-section"
+            id="summarizerSection"
+            style="display: none;"
+        >
+
+
+            <div class="chat-header">
+
+                <div>
+
+                    <h2>
+                        📝 Notes Summarizer
+                    </h2>
+
+                    <p>
+                        Paste your study notes and get a simple summary.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Notes input -->
+
+            <div class="summarizer-content">
+
+                <label for="notesInput">
+                    Your Notes
+                </label>
+
+
+                <textarea
+                    id="notesInput"
+                    placeholder="Paste your study notes here..."
+                    rows="12"
+                ></textarea>
+
+
+                <button
+                    id="summarizeBtn"
+                    type="button"
+                >
+
+                    ✨ Summarize Notes
+
+                </button>
+
+
+
+                <!-- Summary result -->
+
+                <div
+                    id="summaryResult"
+                    class="summary-result"
+                >
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= STUDY PLANNER ================= -->
+
+<section
+    class="planner-section"
+    id="plannerSection"
+    style="display: none;"
+>
+
+    <div class="chat-header">
+
+        <div>
+            <h2>📅 Study Planner</h2>
+
+            <p>
+                Create a simple study plan with StudyBuddy AI.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="planner-content">
+
+        <div class="planner-field">
+
+            <label for="plannerSubject">
+                Subject
+            </label>
+
+            <input
+                type="text"
+                id="plannerSubject"
+                placeholder="e.g. Machine Learning"
+            >
+
+        </div>
+
+
+        <div class="planner-field">
+
+            <label for="plannerTopics">
+                Topics to Study
+            </label>
+
+            <textarea
+                id="plannerTopics"
+                rows="6"
+                placeholder="e.g. Decision Trees, SVM, PAC Learning, Bayesian Decision Theory"
+            ></textarea>
+
+        </div>
+
+
+        <div class="planner-row">
+
+            <div class="planner-field">
+
+                <label for="plannerDays">
+                    Number of Days
+                </label>
+
+                <input
+                    type="number"
+                    id="plannerDays"
+                    min="1"
+                    max="30"
+                    value="5"
+                >
+
+            </div>
+
+
+            <div class="planner-field">
+
+                <label for="plannerHours">
+                    Hours per Day
+                </label>
+
+                <input
+                    type="number"
+                    id="plannerHours"
+                    min="1"
+                    max="12"
+                    value="2"
+                >
+
+            </div>
+
+        </div>
+
+
+        <button
+            id="generatePlanBtn"
+            class="generate-plan-btn"
+            type="button"
+        >
+            ✨ Generate Study Plan
+        </button>
+
+
+        <div
+            id="plannerResult"
+            class="planner-result"
+        ></div>
+
+    </div>
+
+</section>
+    </main>
+
+
+
+    <!-- ================= MARKDOWN ================= -->
+
+    <!-- Markdown parser -->
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
+    <!-- Security sanitizer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
+
+
+    <!-- Our JavaScript -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
