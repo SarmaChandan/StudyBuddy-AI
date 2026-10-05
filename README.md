@@ -1,34 +1,42 @@
 # 📚 StudyBuddy AI
 
-StudyBuddy AI is a simple AI-powered study assistant designed to help students learn, practice, and organize their studies.
+StudyBuddy AI is an AI-powered learning assistant designed to help students understand concepts, summarize notes, practice with quizzes, and organize their study schedules.
+
+## 🚀 Live Demo
+
+👉 [Try StudyBuddy AI][(https://studybuddy-ai-rwfq.onrender.com)]
 
 ## ✨ Features
 
-- 🤖 **AI Study Chat**
-  - Ask academic questions and get AI-powered explanations.
-  - Choose a subject and learning mode.
-  - Supports Classmate, Teacher, Exam, Coding, and Beginner modes.
+### 🤖 AI Study Chat
+- Ask academic questions and get AI-powered explanations.
+- Select a subject and learning mode.
+- Learning modes:
+  - 👨‍🎓 Classmate
+  - 👨‍🏫 Teacher
+  - 📝 Exam
+  - 💻 Coding
+  - 🌱 Beginner
+- Supports streaming AI responses.
 
-- 📖 **Notes Summarizer**
-  - Convert long study notes into clear and concise summaries.
+### 📖 Notes Summarizer
+- Convert long study notes into clear and concise summaries.
+- Helps students quickly review important information.
 
-- 📝 **AI Quiz**
-  - Generate multiple-choice quizzes using AI.
-  - Choose the subject and difficulty level.
-  - Get your score after completing the quiz.
+### 📝 AI Quiz
+- Generate AI-powered multiple-choice quizzes.
+- Select subject and difficulty level.
+- Automatically calculate the final score.
 
-- 📅 **Study Planner**
-  - Enter your subject, topics, available days, and study hours.
-  - Generate a personalized day-by-day study plan.
+### 📅 Study Planner
+- Enter subjects, topics, available days, and study hours.
+- Generate a personalized study schedule.
 
-- 🌙 **Dark Mode**
-  - Comfortable interface for studying in low-light environments.
+### 🌙 Dark Mode
+- Comfortable interface for studying in low-light environments.
 
-- 📱 **Responsive Design**
-  - Works across desktop and mobile screen sizes.
-
-- ⚡ **Streaming AI Responses**
-  - AI Chat responses are displayed progressively as they are generated.
+### 📱 Responsive Design
+- Designed to work across desktop and mobile devices.
 
 ## 🛠️ Technologies Used
 
@@ -54,9 +62,10 @@ StudyBuddy-AI/
 ├── index.html
 ├── style.css
 ├── script.js
+├── README.md
 ├── .gitignore
 │
 └── backend/
     ├── server.js
     ├── package.json
-    └── .env
+    └── package-lock.json
