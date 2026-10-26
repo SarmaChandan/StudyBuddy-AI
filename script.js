@@ -60,7 +60,7 @@ async function sendMessage() {
         // ========================================
 
         const response = await fetch(
-            "http://localhost:5000/api/chat",
+            "/api/chat",
             {
                 method: "POST",
 
@@ -794,7 +794,7 @@ summarizeBtn.addEventListener(
             // ========================================
 
             const response = await fetch(
-                "http://localhost:5000/api/chat",
+                "/api/chat",
                 {
                     method: "POST",
 
@@ -971,7 +971,7 @@ Return only JSON.
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/chat",
+                    "/api/chat",
                     {
                         method: "POST",
 
@@ -1327,7 +1327,7 @@ Do not make the plan unnecessarily long.
 
             const response =
                 await fetch(
-                    "http://localhost:5000/api/chat",
+                    "/api/chat",
                     {
                         method: "POST",
 
